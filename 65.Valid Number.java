@@ -1,5 +1,10 @@
 class Solution {
     public boolean isNumber(String s) {
+        if (s.equals("Infinity") || s.equals("-Infinity") || s.equals("+Infinity")
+                || s.equals("NaN")) {
+            return false;
+        }
+
         try {
             Double.parseDouble(s);
 
